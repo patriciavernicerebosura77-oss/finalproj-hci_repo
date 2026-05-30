@@ -1,0 +1,50 @@
+{
+  "name": "Translation",
+  "type": "object",
+  "properties": {
+    "source_text": {
+      "type": "string",
+      "description": "Original text"
+    },
+    "translated_text": {
+      "type": "string",
+      "description": "Translated text"
+    },
+    "romanized_text": {
+      "type": "string",
+      "description": "Romanized pronunciation"
+    },
+    "source_lang": {
+      "type": "string",
+      "description": "Source language code"
+    },
+    "target_lang": {
+      "type": "string",
+      "description": "Target language code"
+    },
+    "is_saved": {
+      "type": "boolean",
+      "default": false,
+      "description": "Saved as favorite phrase"
+    },
+    "tone": {
+      "type": "string",
+      "enum": [
+        "formal",
+        "casual",
+        "natural"
+      ],
+      "default": "natural"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category for saved phrases"
+    }
+  },
+  "required": [
+    "source_text",
+    "translated_text",
+    "source_lang",
+    "target_lang"
+  ]
+}
